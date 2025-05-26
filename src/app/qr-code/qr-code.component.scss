@@ -1,0 +1,50 @@
+// #canvas {
+//   margin-top: 20px;
+// }
+
+// #canvas {
+//   width: 200px; /* Largeur du QR code */
+//   height: 200px; /* Hauteur du QR code */
+//   border: 5px solid #000; /* Cadre noir de 5 pixels */
+//   padding: 10px; /* Espacement intérieur */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #fff; /* Couleur de fond */
+// }
+
+// #body {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+//   background-color: #f0f0f0; /* Couleur de fond douce */
+//   font-family: Arial, sans-serif; /* Police de caractère */
+// }
+
+// #canvas {
+//   width: 200px; /* Largeur du QR code */
+//   height: 200px; /* Hauteur du QR code */
+//   border: 5px solid #4CAF50; /* Cadre vert */
+//   border-radius: 15px; /* Coins arrondis */
+//   padding: 10px; /* Espacement intérieur */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #fff; /* Couleur de fond du QR code */
+//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre portée */
+// }
+
+// p {
+//   margin-top: 20px; /* Espacement au-dessus du texte */
+//   font-size: 18px; /* Taille de la police */
+//   color: #333; /* Couleur du texte */
+// }
+
+.qr-code-frame {
+  border: 5px solid #499BD4; /* Couleur du cadre */
+  padding: 10px; /* Espace autour du QR code */
+  display: inline-block; /* Pour centrer le cadre */
+  border-radius: 15px; /* Coins arrondis */
+}

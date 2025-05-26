@@ -1,0 +1,201 @@
+<!-- <input type="text" [(ngModel)]="qrData" placeholder="Entrez l'URL ou le texte ici" />
+    <button (click)="generateQRCode()">Générer le Code</button>
+    <div id="canvas"></div> -->
+
+<div>
+  <h1>Générateur de QR Code</h1>
+
+  <label for="name">Nom:</label>
+  <input
+    type="text"
+    id="name"
+    [(ngModel)]="name"
+    placeholder="Entrez votre nom"
+  />
+
+  <label for="title">Titre:</label>
+  <input
+    type="text"
+    id="title"
+    [(ngModel)]="title"
+    placeholder="Entrez votre titre"
+  />
+
+  <label for="company">Entreprise:</label>
+  <input
+    type="text"
+    id="company"
+    [(ngModel)]="company"
+    placeholder="Entrez votre entreprise"
+  />
+
+  <label for="phone">Téléphone:</label>
+  <input
+    type="text"
+    id="phone"
+    [(ngModel)]="phone"
+    placeholder="Entrez votre téléphone"
+  />
+
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    [(ngModel)]="email"
+    placeholder="Entrez votre email"
+  />
+
+  <label for="website">Site Web:</label>
+  <input
+    type="url"
+    id="website"
+    [(ngModel)]="website"
+    placeholder="Entrez votre site web"
+  />
+
+  <label for="logo">Télécharger le logo:</label>
+  <input
+    type="file"
+    id="logo"
+    (change)="onLogoUpload($event)"
+    accept=".png, .jpg, .jpeg, .gif"
+  />
+
+  <button (click)="generateQRCode()">Générer le Code</button>
+
+  <!-- Section pour le QR code avec un cadre -->
+  <div id="body">
+    <div class="qr-code-frame">
+      <div id="canvas" class="qr-code"></div>
+      <p>Scan-me</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div>
+  <h1>Générateur de QR Code</h1>
+
+  <label for="name">Nom:</label>
+  <input
+    type="text"
+    id="name"
+    [(ngModel)]="name"
+    placeholder="Entrez votre nom"
+  />
+
+  <label for="title">Titre:</label>
+  <input
+    type="text"
+    id="title"
+    [(ngModel)]="title"
+    placeholder="Entrez votre titre"
+  />
+
+  <label for="company">Entreprise:</label>
+  <input
+    type="text"
+    id="company"
+    [(ngModel)]="company"
+    placeholder="Entrez votre entreprise"
+  />
+
+  <label for="phone">Téléphone:</label>
+  <input
+    type="text"
+    id="phone"
+    [(ngModel)]="phone"
+    placeholder="Entrez votre téléphone"
+  />
+
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    [(ngModel)]="email"
+    placeholder="Entrez votre email"
+  />
+
+  <label for="website">Site Web:</label>
+  <input
+    type="url"
+    id="website"
+    [(ngModel)]="website"
+    placeholder="Entrez votre site web"
+  />
+
+  <label for="logo">Télécharger le logo:</label>
+  <input
+    type="file"
+    id="logo"
+    (change)="onLogoUpload($event)"
+    accept=".png, .jpg, .jpeg, .gif"
+  />
+
+  <button (click)="generateQRCode()">Générer le Code</button>
+
+  <div id="body">
+    <div id="canvas" class="qr-code"></div>
+    <p>Scan-me</p>
+  </div>
+</div> -->
+
+<!-- <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+  <h1 style="text-align: center; color: #4CAF50;">Générateur de QR Code</h1>
+
+  <form>
+      <div style="margin-bottom: 15px;">
+          <label for="name" style="font-weight: bold;">Nom:</label>
+          <input type="text" id="name" [(ngModel)]="name" placeholder="Entrez votre nom" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;" required />
+      </div>
+
+      <div style="margin-bottom: 15px;">
+          <label for="title" style="font-weight: bold;">Titre:</label>
+          <input type="text" id="title" [(ngModel)]="title" placeholder="Entrez votre titre" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;" required />
+      </div>
+
+      <div style="margin-bottom: 15px;">
+          <label for="company" style="font-weight: bold;">Entreprise:</label>
+          <input type="text" id="company" [(ngModel)]="company" placeholder="Entrez votre entreprise" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;" required />
+      </div>
+
+      <div style="margin-bottom: 15px;">
+          <label for="phone" style="font-weight: bold;">Téléphone:</label>
+          <input type="text" id="phone" [(ngModel)]="phone" placeholder="Entrez votre téléphone" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;" required />
+      </div>
+
+      <div style="margin-bottom: 15px;">
+          <label for="email" style="font-weight: bold;">Email:</label>
+          <input type="email" id="email" [(ngModel)]="email" placeholder="Entrez votre email" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;" required />
+      </div>
+
+      <div style="margin-bottom: 15px;">
+          <label for="website" style="font-weight: bold;">Site Web:</label>
+          <input type="url" id="website" [(ngModel)]="website" placeholder="Entrez votre site web" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;" />
+      </div>
+
+      <div style="margin-bottom: 15px;">
+          <label for="logo" style="font-weight: bold;">Télécharger le logo:</label>
+          <input type="file" id="logo" (change)="onLogoUpload($event)" accept=".png, .jpg, .jpeg, .gif" style="border-radius: 5px;" />
+      </div>
+
+      <button (click)="generateQRCode()" style="
+          background-color: #4CAF50;
+          color:white;
+          padding:10px;
+          border:none;
+          border-radius:5px;
+          cursor:pointer;
+          width:100%;
+          font-size:bold;
+      ">Générer le Code</button>
+  </form>
+
+  <div id="canvas" style="
+      margin-top:20px;
+      padding-top:10px;
+      text-align:center;
+  "></div>
+</div> -->
